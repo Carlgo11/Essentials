@@ -23,6 +23,10 @@ public class Commandgc extends EssentialsCommand
 	protected void run(final Server server, final CommandSource sender, final String commandLabel, final String[] args) throws Exception
 	{
 		double tps = ess.getTimer().getAverageTPS();
+        if (tps >= 20.0) {
+        tps = 20.0;
+        }
+		
 		ChatColor color;
 		if (tps >= 18.0)
 		{
